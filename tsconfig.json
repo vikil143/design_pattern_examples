@@ -1,0 +1,14 @@
+{
+  "compilerOptions": {
+    "module": "amd",
+    "noImplicitAny": true,
+    "removeComments": true,
+    "preserveConstEnums": true,
+    "outFile": "./organization/index.js",
+    "sourceMap": true
+  },
+  "include": ["organization/index.ts"],
+  "exclude": ["node_modules"],
+  "lib": ["es6"],
+  "target": "es5"
+}
