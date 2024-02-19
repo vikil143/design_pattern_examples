@@ -17,10 +17,7 @@
 */
 
 import employees from "./controllers/employees";
-import { Employee } from "./controllers/employee";
-import { HrLata } from "./users/Lata";
-import { EmpMamta } from "./users/Mamta";
-import { EmpRama } from "./users/Rama";
+import { createUser } from "./users/create-user";
 
 class Task {}
 
@@ -30,10 +27,28 @@ class Salary {}
 function main() {
   // First Accepting some Employee by CEO
   // const employees = new Employees();
-  const hrLata: Employee = new HrLata(2, "Lata", "Female", "HR", 10000);
+  const hrLata = createUser({
+    id: 2,
+    name: "Lata",
+    gender: "Female",
+    role: "HR",
+    salary: 10000,
+  });
   employees.addEmployee(hrLata);
-  const emMamta = new EmpMamta(1, "Mamta", "Female", "Employee", 15000);
-  const emRama = new EmpRama(1, "Rama", "Male", "Employee", 15000);
+  const emMamta = createUser({
+    id: 1,
+    name: "Mamta",
+    gender: "Female",
+    role: "Employee",
+    salary: 15000,
+  });
+  const emRama = createUser({
+    id: 1,
+    name: "Rama",
+    gender: "Male",
+    role: "Employee",
+    salary: 15000,
+  });
   hrLata.addEmployee(emMamta);
   hrLata.addEmployee(emRama);
   employees.printEmployeelist();

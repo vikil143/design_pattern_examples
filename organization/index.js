@@ -16,9 +16,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 
 */
 var employees_1 = require("./controllers/employees");
-var Lata_1 = require("./users/Lata");
-var Mamta_1 = require("./users/Mamta");
-var Rama_1 = require("./users/Rama");
+var create_user_1 = require("./users/create-user");
 var Task = /** @class */ (function () {
     function Task() {
     }
@@ -33,10 +31,28 @@ var Salary = /** @class */ (function () {
 function main() {
     // First Accepting some Employee by CEO
     // const employees = new Employees();
-    var hrLata = new Lata_1.HrLata(2, "Lata", "Female", "HR", 10000);
+    var hrLata = (0, create_user_1.createUser)({
+        id: 2,
+        name: "Lata",
+        gender: "Female",
+        role: "HR",
+        salary: 10000,
+    });
     employees_1.default.addEmployee(hrLata);
-    var emMamta = new Mamta_1.EmpMamta(1, "Mamta", "Female", "Employee", 15000);
-    var emRama = new Rama_1.EmpRama(1, "Rama", "Male", "Employee", 15000);
+    var emMamta = (0, create_user_1.createUser)({
+        id: 1,
+        name: "Mamta",
+        gender: "Female",
+        role: "Employee",
+        salary: 15000,
+    });
+    var emRama = (0, create_user_1.createUser)({
+        id: 1,
+        name: "Rama",
+        gender: "Male",
+        role: "Employee",
+        salary: 15000,
+    });
     hrLata.addEmployee(emMamta);
     hrLata.addEmployee(emRama);
     employees_1.default.printEmployeelist();

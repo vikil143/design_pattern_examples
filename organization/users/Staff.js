@@ -15,16 +15,16 @@ var __extends = (this && this.__extends) || (function () {
     };
 })();
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.EmpMamta = void 0;
+exports.Staff = void 0;
 var employee_1 = require("../controllers/employee");
-var EmpMamta = /** @class */ (function (_super) {
-    __extends(EmpMamta, _super);
-    function EmpMamta() {
+var Staff = /** @class */ (function (_super) {
+    __extends(Staff, _super);
+    function Staff() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
-    EmpMamta.prototype.doingTask = function () {
+    Staff.prototype.doingTask = function () {
         console.log("Lot's of work yes we are doing the task!!! -", this.name);
     };
-    return EmpMamta;
+    return Staff;
 }(employee_1.Employee));
-exports.EmpMamta = EmpMamta;
+exports.Staff = Staff;
