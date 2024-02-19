@@ -5,18 +5,9 @@ var Employees = /** @class */ (function () {
     function Employees() {
         this.staff = [types_1.CEO];
     }
-    Employees.prototype.reference = function () {
-        return this;
-    };
-    Employees.prototype.addEmployee = function (id, name, gender, role, salary) {
-        this.staff.push({
-            id: id,
-            name: name,
-            gender: gender,
-            role: role,
-            salary: salary,
-        });
-        console.log("Congrates you're hired, ", name);
+    Employees.prototype.addEmployee = function (employee) {
+        this.staff.push(employee);
+        console.log("Congrates you're hired, ", employee.name);
     };
     Employees.prototype.removeEmployee = function (employeeId) {
         this.staff.filter(function (employee) { return employee.id !== employeeId; });
@@ -28,4 +19,4 @@ var Employees = /** @class */ (function () {
     };
     return Employees;
 }());
-exports.default = Employees;
+exports.default = new Employees();

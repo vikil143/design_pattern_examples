@@ -16,7 +16,9 @@ Object.defineProperty(exports, "__esModule", { value: true });
 
 */
 var employees_1 = require("./controllers/employees");
-var employee_1 = require("./controllers/employee");
+var Lata_1 = require("./users/Lata");
+var Mamta_1 = require("./users/Mamta");
+var Rama_1 = require("./users/Rama");
 var Task = /** @class */ (function () {
     function Task() {
     }
@@ -30,17 +32,16 @@ var Salary = /** @class */ (function () {
 // This are tasks which are assigned to employee
 function main() {
     // First Accepting some Employee by CEO
-    var employees = new employees_1.default();
-    var HRLata = new employee_1.Employee(2, "Lata", "Female", "HR", 10000);
-    var esRef = employees.reference();
-    employees.addEmployee(HRLata.id, HRLata.name, HRLata.gender, HRLata.role, HRLata.salary);
-    var EmMamta = new employee_1.Employee(1, "Mamta", "Female", "Employee", 15000);
-    var EmRama = new employee_1.Employee(1, "Rama", "Male", "Employee", 15000);
-    HRLata.addEmployee(esRef, EmMamta);
-    HRLata.addEmployee(esRef, EmRama);
-    employees.printEmployeelist();
-    EmMamta.doingTask();
-    EmRama.doingTask();
+    // const employees = new Employees();
+    var hrLata = new Lata_1.HrLata(2, "Lata", "Female", "HR", 10000);
+    employees_1.default.addEmployee(hrLata);
+    var emMamta = new Mamta_1.EmpMamta(1, "Mamta", "Female", "Employee", 15000);
+    var emRama = new Rama_1.EmpRama(1, "Rama", "Male", "Employee", 15000);
+    hrLata.addEmployee(emMamta);
+    hrLata.addEmployee(emRama);
+    employees_1.default.printEmployeelist();
+    emMamta.doingTask();
+    emRama.doingTask();
     // Later add employee by HR Team
     // Remove some Employee by CEO
     // Salary pass on time by HR Team

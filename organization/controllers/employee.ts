@@ -1,7 +1,11 @@
 import { TEmployee, TGender, TRole } from "../types";
-import Employees from "./employees";
+import employees from "./employees";
 
-export class Employee {
+interface IDoTask {
+  doingTask: () => void;
+}
+
+export abstract class Employee {
   name: string;
   id: number;
   gender: TGender;
@@ -22,18 +26,12 @@ export class Employee {
     this.salary = salary;
   }
   // Doing tasks and assign tasks
-  doingTask() {
-    console.log("Lot's of work yes we are doing the task!!!");
-  }
+  // doingTask() {
+  //   console.log("Lot's of work yes we are doing the task!!! -", this.name);
+  // }
+  abstract doingTask(): void;
 
-  addEmployee(employees: Employees, employee: TEmployee) {
-    this.doingTask();
-    employees.addEmployee(
-      employee.id,
-      employee.name,
-      employee.gender,
-      employee.role,
-      employee.salary
-    );
+  addEmployee(employee: Employee) {
+    employees.addEmployee(employee);
   }
 }

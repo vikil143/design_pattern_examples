@@ -1,27 +1,12 @@
 import { CEO, TEmployee, TGender, TRole } from "../types";
+import { Employee } from "./employee";
 
 class Employees {
   staff: TEmployee[] = [CEO];
 
-  reference() {
-    return this;
-  }
-
-  addEmployee(
-    id: number,
-    name: string,
-    gender: TGender,
-    role: TRole,
-    salary: number
-  ) {
-    this.staff.push({
-      id,
-      name,
-      gender,
-      role,
-      salary,
-    });
-    console.log("Congrates you're hired, ", name);
+  addEmployee(employee: Employee) {
+    this.staff.push(employee);
+    console.log("Congrates you're hired, ", employee.name);
   }
 
   removeEmployee(employeeId: number) {
@@ -41,4 +26,4 @@ class Employees {
   }
 }
 
-export default Employees;
+export default new Employees();
