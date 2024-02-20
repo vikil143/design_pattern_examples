@@ -1,11 +1,15 @@
 import { TEmployee, TGender, TRole } from "../types";
 import employees from "./employees";
 
+// interface IDoTask<T> {
+//   (t: T): void;
+// }
+
 interface IDoTask {
-  doingTask: () => void;
+  doingTask(): void;
 }
 
-export abstract class Employee {
+export class Employee implements IDoTask {
   name: string;
   id: number;
   gender: TGender;
@@ -25,11 +29,14 @@ export abstract class Employee {
     this.role = role;
     this.salary = salary;
   }
+  doingTask(): void {
+    throw new Error("Method not implemented.");
+  }
   // Doing tasks and assign tasks
   // doingTask() {
   //   console.log("Lot's of work yes we are doing the task!!! -", this.name);
   // }
-  abstract doingTask(): void;
+  // abstract doingTask(): void;
 
   addEmployee(employee: Employee) {
     employees.addEmployee(employee);
