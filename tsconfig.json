@@ -4,11 +4,13 @@
     "noImplicitAny": true,
     "removeComments": true,
     "preserveConstEnums": true,
-    "outFile": "./organization/index.js",
+    "outFile": "./dist/bundle.js",
+    "outDir": "./dist",
     "sourceMap": true
   },
   "include": ["organization/index.ts"],
   "exclude": ["node_modules"],
   "lib": ["es6"],
-  "target": "es5"
+  "target": "es5",
+  "files": ["./organization/index.ts"]
 }
