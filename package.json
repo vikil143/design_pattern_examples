@@ -5,13 +5,16 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "ts_organization": "cd organization && tsc index.ts --watch",
-    "npm_organization": "cd organization && nodemon index"
+    "ts_organization": "tsc index.ts --watch",
+    "npm_organization": "nodemon index"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "nodemon": "^3.0.3",
-    "typescript": "^5.3.3"
+    "ts-loader": "^9.5.1",
+    "typescript": "^5.3.3",
+    "webpack": "^5.90.3",
+    "webpack-cli": "^5.1.4"
   }
 }

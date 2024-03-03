@@ -16,7 +16,7 @@
 
 */
 
-import employees from "./controllers/employees";
+import { employees } from "./controllers/employees";
 import { createUser } from "./users/create-user";
 
 class Task {}
@@ -24,7 +24,7 @@ class Task {}
 class Salary {}
 
 // This are tasks which are assigned to employee
-function main() {
+export default function main() {
   // First Accepting some Employee by CEO
   // const employees = new Employees();
   const hrLata = createUser({
@@ -58,5 +58,3 @@ function main() {
   // Remove some Employee by CEO
   // Salary pass on time by HR Team
 }
-
-main();

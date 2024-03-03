@@ -26,4 +26,6 @@ class Employees {
   }
 }
 
-export default new Employees();
+const employees = new Employees();
+
+export { employees };

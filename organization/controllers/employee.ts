@@ -1,5 +1,5 @@
 import { TEmployee, TGender, TRole } from "../types";
-import employees from "./employees";
+import { employees } from "./employees";
 
 // interface IDoTask<T> {
 //   (t: T): void;

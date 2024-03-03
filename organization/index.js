@@ -38,7 +38,7 @@ function main() {
         role: "HR",
         salary: 10000,
     });
-    employees_1.default.addEmployee(hrLata);
+    employees_1.employees.addEmployee(hrLata);
     var emMamta = (0, create_user_1.createUser)({
         id: 1,
         name: "Mamta",
@@ -55,11 +55,11 @@ function main() {
     });
     hrLata.addEmployee(emMamta);
     hrLata.addEmployee(emRama);
-    employees_1.default.printEmployeelist();
+    employees_1.employees.printEmployeelist();
     emMamta.doingTask();
     emRama.doingTask();
     // Later add employee by HR Team
     // Remove some Employee by CEO
     // Salary pass on time by HR Team
 }
-main();
+exports.default = main;

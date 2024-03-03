@@ -1,16 +1,17 @@
 {
   "compilerOptions": {
-    "module": "amd",
+    "module": "AMD",
     "noImplicitAny": true,
     "removeComments": true,
     "preserveConstEnums": true,
     "outFile": "./dist/bundle.js",
     "outDir": "./dist",
-    "sourceMap": true
+    "sourceMap": true,    
+    "strict": true,
   },
-  "include": ["organization/index.ts"],
+  "include": ["*.ts"],
   "exclude": ["node_modules"],
   "lib": ["es6"],
   "target": "es5",
-  "files": ["./organization/index.ts"]
+  "files": ["./index.ts"]
 }
