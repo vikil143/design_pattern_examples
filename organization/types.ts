@@ -1,5 +1,6 @@
 export type TRole = "CEO" | "HR" | "Employee";
 export type TGender = "Male" | "Female";
+export type StatusTask = "Done" | "Progress" | "Pending";
 
 export type TEmployee = {
   name: string;
