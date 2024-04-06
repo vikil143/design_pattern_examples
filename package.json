@@ -6,7 +6,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "ts_organization": "tsc index.ts --watch",
-    "npm_organization": "nodemon index"
+    "npm_organization": "nodemon index",
+    "start_ts": "tsc index.ts --watch",
+    "start_npm": "nodemon index"
   },
   "author": "",
   "license": "ISC",
