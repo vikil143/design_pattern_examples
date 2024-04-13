@@ -31,4 +31,29 @@ export class SinglyLinkedList {
     this.length++;
     return this;
   }
+  /*
+    Pop pseudocode
+    1. If their is no node return undefined
+    2. Loop through the list until you reach the tail
+    3. next property of 2nd last node should null
+    4. 2nd last node should tail 
+    5. descreament length by 1
+    6. return last node
+  */
+  pop() {
+    if (!this.head) return undefined;
+    let current = this.head;
+    let newTail = current;
+    if (current.next) {
+      newTail = current;
+      current = current.next;
+    }
+
+    this.tail = newTail;
+    this.tail.next = null;
+
+    this.length--;
+
+    return current;
+  }
 }

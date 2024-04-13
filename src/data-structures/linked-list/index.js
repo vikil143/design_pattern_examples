@@ -28,6 +28,29 @@ var SinglyLinkedList = /** @class */ (function () {
         this.length++;
         return this;
     };
+    /*
+      Pop pseudocode
+      1. If their is no node return undefined
+      2. Loop through the list until you reach the tail
+      3. next property of 2nd last node should null
+      4. 2nd last node should tail
+      5. descreament length by 1
+      6. return last node
+    */
+    SinglyLinkedList.prototype.pop = function () {
+        if (!this.head)
+            return undefined;
+        var current = this.head;
+        var newTail = current;
+        if (current.next) {
+            newTail = current;
+            current = current.next;
+        }
+        this.tail = newTail;
+        this.tail.next = null;
+        this.length--;
+        return current;
+    };
     return SinglyLinkedList;
 }());
 exports.SinglyLinkedList = SinglyLinkedList;
