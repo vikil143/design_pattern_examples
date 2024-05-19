@@ -8,6 +8,7 @@
     "outDir": "./dist",
     "sourceMap": true,    
     "strict": true,
+    "moduleResolution":"node",
   },
   "include": ["*.ts"],
   "exclude": ["node_modules"],
