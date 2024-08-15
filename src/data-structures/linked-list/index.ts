@@ -24,6 +24,14 @@ export class SinglyLinkedList {
       this.head = newNode;
     } else {
       // Here this worked and assigned the value to head next by reference value
+      /*  
+        Here what happening it was assign to both by reference both means given below
+        this.head.next
+        and 
+        this.tail.next
+        then it reassign it to 
+        this.tail
+      */
       this.tail.next = newNode;
       this.tail = newNode;
     }
@@ -44,7 +52,7 @@ export class SinglyLinkedList {
     if (!this.head) return undefined;
     let current = this.head;
     let newTail = current;
-    if (current.next) {
+    while (current.next) {
       newTail = current;
       current = current.next;
     }
@@ -53,7 +61,24 @@ export class SinglyLinkedList {
     this.tail.next = null;
 
     this.length--;
-
     return current;
+  }
+  /*
+    pseudocode
+    1. if their is no node return undefined
+    2. store current head property in a variable
+    3. set head propert to be current head next property
+    4. decreament length by 1
+    5. return current node
+  */
+  shift() {
+    if (!this.head) return undefined;
+    let currentHead = this.head;
+    this.head = currentHead.next;
+    this.length--;
+    if (this.length === 0) {
+      this.tail = null;
+    }
+    return currentHead;
   }
 }
