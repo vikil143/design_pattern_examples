@@ -10,7 +10,7 @@
     "strict": true,
     "moduleResolution":"node",
   },
-  "include": ["*.ts"],
+  "include": ["src/**/*.ts", "server.js"],
   "exclude": ["node_modules"],
   "lib": ["es6"],
   "target": "es5",
