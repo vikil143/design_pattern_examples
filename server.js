@@ -8,7 +8,8 @@ app.use(express.static(path.join(__dirname)));
 
 // Route for serving the HTML file
 app.get('/', (req, res) => {
-  res.sendFile(path.join(__dirname, './src/public/design-patterns/index.html'));
+  // res.sendFile(path.join(__dirname, './src/public/design-patterns/index.html'));
+  res.sendFile(path.join(__dirname, "./src/js/apps/todos/index.html"))
 });
 
 // Start the server

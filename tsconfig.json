@@ -10,7 +10,7 @@
     "strict": true,
     "moduleResolution":"node",
   },
-  "include": ["src/**/*.ts", "server.js"],
+  "include": ["src/**/*.ts", "server.js", "src/js/apps/todos/index.js"],
   "exclude": ["node_modules"],
   "lib": ["es6"],
   "target": "es5",

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive To-Do List</title>
+    <style>
+        /* Basic styling */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .todo-container {
+            width: 300px;
+            background: #fff;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+        }
+        .todo-container h1 {
+            margin: 0;
+            font-size: 24px;
+            text-align: center;
+        }
+        .todo-form {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+        }
+        .todo-form input {
+            flex: 1;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ddd;
+            border-radius: 3px;
+        }
+        .todo-form button {
+            padding: 10px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+            margin-left: 5px;
+        }
+        .todo-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .todo-item {
+            padding: 10px;
+            border-bottom: 1px solid #ddd;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .todo-item:last-child {
+            border-bottom: none;
+        }
+        .todo-item.completed {
+            text-decoration: line-through;
+            color: #aaa;
+        }
+        .todo-item button {
+            background: none;
+            border: none;
+            cursor: pointer;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+    <div class="todo-container">
+        <h1>To-Do List</h1>
+        <form class="todo-form">
+            <input type="text" id="todo-input" placeholder="Add a new task" />
+            <button type="submit">Add</button>
+        </form>
+        <ul class="todo-list" id="todo-list">
+            <!-- To-Do items will be rendered here -->
+        </ul>
+    </div>
+
+    <script src="src/js/apps/todos/index.js"></script>
+</body>
+</html>
